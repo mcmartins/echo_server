@@ -12,3 +12,5 @@ def initialize(verbose=False):
     logging.getLogger().addHandler(__handler)
     if verbose:
         logging.getLogger().setLevel('DEBUG')
+    else:
+        logging.getLogger().setLevel('INFO')
