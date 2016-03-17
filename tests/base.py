@@ -42,4 +42,4 @@ def setup_client():
 
 class BaseEchoServerTest(unittest.TestCase):
     def test_(self):
-        raise NotImplementedError('Must implement this method!')
+        pass
