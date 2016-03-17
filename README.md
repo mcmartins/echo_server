@@ -5,6 +5,14 @@ everytime it gets a '\n', with the sequence of messages received until then.<br/
 The server implements a connection timeout handler, so that connections idle 
 more than this threshold get disconnected and cleaned from the system (defaults to 20s).
 
+## Tests
+
+To run the tests just execute:
+
+```bash
+python tests/test_multiple_connections.py
+```
+
 ## Install & Run
 
 The steps to use the application.
