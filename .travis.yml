@@ -12,4 +12,4 @@ script:
   - python tests/test_multiple_connections.py
 
 after_script:
-  - cat *.log
+  - cat tests/*.log
