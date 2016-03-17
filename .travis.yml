@@ -1,15 +1,12 @@
 language: python
 python:
-    - 2.7.6
+  - 2.7.6
 
 env:
-    - DEPS=true
+  - DEPS=true
 
 install:
   - python setup.py clean build install
 
 script:
   - python tests/test_multiple_connections.py
-
-after_script:
-  - cat tests/*.log
