@@ -9,7 +9,7 @@ install:
   - python setup.py clean build install
 
 script:
-  - python -m echo_server -v
+  - python tests/test_multiple_connections.py
 
 after_script:
   - cat *.log
