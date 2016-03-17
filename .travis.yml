@@ -1,0 +1,15 @@
+language: python
+python:
+    - 2.7.6
+
+env:
+    - DEPS=true
+
+install:
+  - python setup.py clean build install
+
+script:
+  - python -m echo_server -v
+
+after_script:
+  - cat *.log
