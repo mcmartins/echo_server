@@ -10,8 +10,8 @@ class MultiConnectionsEchoServerTest(BaseEchoServerTest):
 
     def test_multiple_connections(self):
         # start server in a different process
-        #server = mp.Process(target=setup_server)
-        #server.start()
+        server = mp.Process(target=setup_server)
+        server.start()
 
         # start multiple connections
         workers = [mp.Process(target=setup_client) for i in range(0, 5)]
@@ -24,7 +24,7 @@ class MultiConnectionsEchoServerTest(BaseEchoServerTest):
             p.join()
 
         # stop the server
-        #server.terminate()
+        server.terminate()
 
 
 if __name__ == '__main__':
