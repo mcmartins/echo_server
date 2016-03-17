@@ -1,5 +1,11 @@
 # Echo Server
 
+[![Build Status](https://travis-ci.org/mcmartins/echo_server.svg)](https://travis-ci.org/mcmartins/echo_server)
+[![Code Climate](https://codeclimate.com/github/mcmartins/echo_server/badges/gpa.svg)](https://codeclimate.com/github/mcmartins/echo_server)
+[![Issue Count](https://codeclimate.com/github/mcmartins/echo_server/badges/issue_count.svg)](https://codeclimate.com/github/mcmartins/echo_server)
+
+## Description
+
 The following project implements a TCP socket server that replies to a client 
 everytime it gets a '\n', with the sequence of messages received until then.<br/>
 The server implements a connection timeout handler, so that connections idle 
