@@ -7,9 +7,11 @@
 ## Description
 
 The following project implements a TCP socket server that replies to a client 
-everytime it gets a '\n', with the sequence of messages received until then.<br/>
+everytime it gets a '\n' (configurable, defaults to '\n'), with the sequence of messages received until then.<br/>
 The server implements a connection timeout handler, so that connections idle 
-more than this threshold get disconnected and cleaned from the system (defaults to 20s).
+more than this threshold get disconnected and cleaned from the system (configurable, defaults to 20s). 
+This means that if a connected socket is not emiting for more than the threshold defined, 
+the connection will be closed in order to flush resources.
 
 ## Tests
 
@@ -37,6 +39,7 @@ python -m echo_server [options]
 
 Where the options are:
 
+"-v", "--verbose" - Set the loog level to 'DEBUG'.<br/>
 "-p", "--port" - Set server port. Defaults to 10000<br/>
 "-t", "--timeout" - Set server socket timeout. Defaults to 0s<br/>
 "-x", "--max-connections" - Set server maximum connections. Defaults to 5<br/>
